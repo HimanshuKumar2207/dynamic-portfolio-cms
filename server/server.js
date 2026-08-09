@@ -49,7 +49,7 @@ app.use(express.json({ limit: '5mb' }));
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-app.get('/api/health', (req, res) => {
+app.get('/', (req, res) => {
     res.json({
         ok: true,
         message: 'API is running'
